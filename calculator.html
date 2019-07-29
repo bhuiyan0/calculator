@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MySimpleCalculator</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="custom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form name="calculator">
+            <div id="title"><label>Calculator</label></div>
+            <input type="text" id="display" name="display" readonly="readonly" placeholder="0" maxlength="10"  />
+            <br />
+            <input type="button" class="button" value="7" onclick="inputNum('7')" />
+            <input type="button" class="button" value="8" onclick="inputNum('8')" />
+            <input type="button" class="button" value="9" onclick="inputNum('9')" />
+            <input type="button" class="button" value="/" onclick="opClick('/')"/>
+            <br />
+            <input type="button" class="button" value="4" onclick="inputNum('4')" />
+            <input type="button" class="button" value="5" onclick="inputNum('5')" />
+            <input type="button" class="button" value="6" onclick="inputNum('6')" />
+            <input type="button" class="button" value="*" onclick="opClick('*')" />
+            <br />
+            <input type="button" class="button" value="1" onclick="inputNum('1')" />
+            <input type="button" class="button" value="2" onclick="inputNum('2')" />
+            <input type="button" class="button" value="3" onclick="inputNum('3')" />
+            <input type="button" class="button" value="-" onclick="opClick('-')" />
+            <br />
+            <input type="button" class="button" value="%" onclick="opClick('%')" />
+            <input type="button" class="button" value="." onclick="dot()" />
+            <input type="button" class="button" value="0" onclick="zero()" />
+            <input type="button" class="button" value="+" onclick="opClick('+')" />
+            <br />
+            <input style="width:100px;" type="button" class="button" value="C" onclick="backspace()" />
+            <input style="width:100px;" type="button" class="button" value="AC" onclick="document.calculator.display.value=''" />
+            <input style="width:100px;" type="button" class="button" value="=" onclick="document.calculator.display.value=eval(document.calculator.display.value)" />
+        </form>
+    </div></body>
+</html>
